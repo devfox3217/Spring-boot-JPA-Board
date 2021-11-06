@@ -25,8 +25,8 @@ import java.util.List;
 public class User implements UserDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "username")
     private String username;
@@ -36,9 +36,6 @@ public class User implements UserDetails {
 
     @Column(name = "password")
     private String password;
-
-    @Column(name = "active")
-    private boolean active;
 
     @Column(name = "roles")
     private String roles;

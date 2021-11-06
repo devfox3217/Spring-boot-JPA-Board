@@ -8,8 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 public class PageController {
 
-    @RequestMapping
+    @RequestMapping(value = {"/", "/index"})
     public String index() {
         return "index";
+    }
+
+    @RequestMapping("/signin")
+    public String signin() {
+        return "signin";
     }
 }

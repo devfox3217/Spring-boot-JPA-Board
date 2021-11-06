@@ -1,10 +1,29 @@
 package com.devfox.board.service.user;
 
 import com.devfox.board.model.User;
+import com.devfox.board.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
-public interface BoardUserDetailsService {
-    UserDetails loadUserByUsername(String username);
+@Service
+@RequiredArgsConstructor
+public class BoardUserDetailsService implements UserDetailsService {
 
-    boolean save(User user);
+    private final UserRepository userRepository;
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
+        User user = userRepository.findByUsername(username);
+        if (user == null) {
+            throw new UsernameNotFoundException("없는 유저입니다. username : " + username);
+        } else {
+            return user;
+        }
+
+    }
+
 }
