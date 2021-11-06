@@ -8,10 +8,10 @@ import java.util.StringTokenizer;
 
 public class TokenUtil {
 
-    public List<String> getTokenArray(String tag) {
+    public List<String> getTokenArray(String tokenString) {
 
         List<String> tokenArray = new ArrayList<>();
-        StringTokenizer stringTokenizer = new StringTokenizer(tag, ",");
+        StringTokenizer stringTokenizer = new StringTokenizer(tokenString, ",");
 
         while (stringTokenizer.hasMoreTokens()) {
             String token = stringTokenizer.nextToken();
