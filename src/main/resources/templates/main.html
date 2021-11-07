@@ -20,6 +20,10 @@
 
 <body class="bg-gray-200">
 
+<h1>어서오고</h1>
+<h3 th:text="${#authentication.principal.username}"></h3>
+<h3 th:text="${#authentication.principal.name}"></h3>
+
 <!-- Bootstrap JS from CDN -->
 <script src="../static/js/popper.min.js"></script>
 <script src="../static/js/bootstrap.min.js"></script>

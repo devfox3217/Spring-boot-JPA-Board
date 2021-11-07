@@ -64,7 +64,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                                 .loginPage("/signin")
                                 .loginProcessingUrl("/signinprocess")
                                 .permitAll()
-                                .defaultSuccessUrl("/", true)
+                                .defaultSuccessUrl("/main", true)
                                 .failureUrl("/signin?success=false")
                 )
                 .logout(logout ->
@@ -78,12 +78,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .key("remember-me-key")
                 .rememberMeParameter("remember-me")
                 .rememberMeCookieName("remember-me-cookie")
+                .userDetailsService(boardUserDetailsService)
                 .tokenValiditySeconds(60)
                 .and()
                 .authorizeRequests()
                 .antMatchers("/*").permitAll()
                 .antMatchers("/admin*").hasRole("ADMIN")
-
                 ;
     }
 
