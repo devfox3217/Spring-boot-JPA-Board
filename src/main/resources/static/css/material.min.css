@@ -4376,10 +4376,10 @@ textarea.form-control, textarea.form-control-lg, textarea.form-control-sm {
 }
 
 .navbar-brand {
-    padding-top: .40625rem;
-    padding-bottom: .40625rem;
+    /*padding-top: .40625rem;*/
+    /*padding-bottom: .40625rem;*/
     margin-right: 1rem;
-    font-size: 1.125rem;
+    font-size: 2.125rem;
     white-space: nowrap
 }
 
@@ -5152,11 +5152,12 @@ textarea.form-control, textarea.form-control-lg, textarea.form-control-sm {
 
 .breadcrumb {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
-    padding: .5rem 1rem;
-    margin-bottom: 1rem;
+    padding: .2rem .5rem;
+    margin-bottom: .5rem;
     list-style: none;
-    background-color: #f0f2f5;
+    background-color: #faf8f8;
     border-radius: .375rem
 }
 
@@ -5909,7 +5910,7 @@ textarea.form-control, textarea.form-control-lg, textarea.form-control-sm {
 }
 
 .toast {
-    width: 350px;
+    width: 100%;
     max-width: 100%;
     font-size: .875rem;
     pointer-events: auto;
@@ -5917,7 +5918,8 @@ textarea.form-control, textarea.form-control-lg, textarea.form-control-sm {
     background-clip: padding-box;
     border: 0 solid transparent;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
-    border-radius: .375rem
+    border-radius: .375rem;
+    text-align: left;
 }
 
 .toast.showing {
@@ -5925,7 +5927,7 @@ textarea.form-control, textarea.form-control-lg, textarea.form-control-sm {
 }
 
 .toast:not(.show) {
-    display: none
+    display: none !important
 }
 
 .toast-container {
@@ -5956,8 +5958,13 @@ textarea.form-control, textarea.form-control-lg, textarea.form-control-sm {
 }
 
 .toast-body {
+    width: 100%;
     padding: .75rem;
     word-wrap: break-word
+}
+
+.toast-body a {
+    color: white;
 }
 
 .modal {
@@ -19597,7 +19604,7 @@ textarea.form-control, textarea.form-control-lg, textarea.form-control-sm {
 }
 
 .breadcrumb-item {
-    font-size: .875rem
+    font-size: .775rem
 }
 
 .breadcrumb-item.text-white:before {

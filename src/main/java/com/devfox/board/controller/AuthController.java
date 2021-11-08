@@ -35,7 +35,7 @@ public class AuthController {
      * @param response the response
      * @param username 이메일 형식으로 된 username을 입력받음
      * @param password 숫자1 특수기호1 포함한 최소 9자리 이상의 비밀번호
-     * @param name     이용자의 이름
+     * @param nickname 이용자의 별명
      * @return void 로 설정한 후 PageScriptUtil로 화면이동을 제어함
      * @throws IOException PageScriptUtil에 사용되는 PrintWriter를 고려한 IOException
      * @see PageScriptUtil
@@ -45,12 +45,12 @@ public class AuthController {
             HttpServletResponse response,
             @RequestParam String username,
             @RequestParam String password,
-            @RequestParam String name
+            @RequestParam String nickname
     ) throws IOException {
         // 최초 username(email)로 중복체크
         User userCheck = userService.findUser(username);
         if (userCheck != null) {
-            PageScriptUtil.alertAndBack(response, "이미 등록된 유저입니다.");
+            PageScriptUtil.alertAndMove(response, "이미 가입하셨습니다.", "/signin");
         } else {
             // 비밀번호에 사용되는 암호화 모듈 선언
             BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -58,7 +58,7 @@ public class AuthController {
             User user = new User();
             user.setUsername(username);
             user.setPassword(encoder.encode(password));
-            user.setName(name);
+            user.setNickname(nickname);
             user.setRoles("USER");
             user.setAccountNonExpired(true);
             user.setAccountNonLocked(true);
@@ -69,13 +69,11 @@ public class AuthController {
             boolean result = userService.save(user);
             if (result) {
                 // 저장 성공시 이름을 포함한 알림 후 main 페이지로 이동
-                PageScriptUtil.alertAndMove(response, name + "님, 회원이 되신것을 환영합니다.", "/main");
+                PageScriptUtil.alertAndMove(response, nickname + "님, 회원이 되신것을 환영합니다.", "/main");
             } else {
                 // 저장 실패시 다시 원래 페이지로 이동
                 PageScriptUtil.alertAndBack(response, "회원가입에 실패하였습니다. 다시 시도해주세요");
             }
         }
-
     }
-
 }

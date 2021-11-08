@@ -13,6 +13,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -31,8 +32,8 @@ public class User implements UserDetails {
     @Column(name = "username")
     private String username;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "nickname")
+    private String nickname;
 
     @Column(name = "password")
     private String password;
@@ -51,6 +52,27 @@ public class User implements UserDetails {
 
     @Column(name = "enabled")
     private boolean enabled;
+
+    @Column(name = "followboard")
+    private String followBoard;
+
+    @Column(name = "blockedboard")
+    private String blockedBoard;
+
+    @Column(name = "introduce")
+    private String introduce;
+
+    @Column(name = "profile")
+    private String profile;
+
+    @Column(name = "point")
+    private int point;
+
+    @Column(name = "level")
+    private int level;
+
+    @Column(name = "regdate")
+    private Date regdate;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
