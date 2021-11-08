@@ -69,8 +69,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 )
                 .logout(logout ->
                         logout
-                                .logoutUrl("/logout")
-                                .logoutSuccessUrl("/"))
+                                .logoutUrl("/signout")
+                                .logoutSuccessUrl("/signin"))
                 .exceptionHandling(error ->
                         error.accessDeniedPage("/access-denied")
                 )
@@ -79,11 +79,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .rememberMeParameter("remember-me")
                 .rememberMeCookieName("remember-me-cookie")
                 .userDetailsService(boardUserDetailsService)
-                .tokenValiditySeconds(60)
+                .tokenValiditySeconds(60 * 60 * 24 * 7 * 30)
                 .and()
                 .authorizeRequests()
+                .antMatchers("/main/**").authenticated()
+                .antMatchers("/admin/**").hasRole("ADMIN")
                 .antMatchers("/*").permitAll()
-                .antMatchers("/admin*").hasRole("ADMIN")
                 ;
     }
 
