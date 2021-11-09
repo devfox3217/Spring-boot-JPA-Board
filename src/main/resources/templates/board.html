@@ -3,7 +3,7 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!-- Nanum Font CDN -->
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Nanum+Myeongjo:wght@400;700;800&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <!-- Fontawesome from CDN -->
@@ -31,7 +31,7 @@
         </a>
         <button class="btn btn-sm btn-link text-white mb-0 ms-auto d-lg-none d-block" style="width: 40%" data-bs-toggle="modal" data-bs-target="#MyMenuModal">
             <img class="profile-img" src="../static/img/default_profile.jpg">
-            &nbsp;이진솔
+            &nbsp;김철수
         </button>
         <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon mt-2">
@@ -48,103 +48,46 @@
                         <span class="nav-title">보드</span>
                         <img src="../static/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-auto ms-lg-2">
                     </a>
-                    <div class="dropdown-menu ms-n3 dropdown-menu-animation dropdown-xl p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="NavBoardMenu">
-                        <div class="row d-none d-lg-block">
-                            <div class="col-12 px-4 py-2">
-                                <div class="row">
-                                    <div class="col-6 position-relative">
-                                        <div class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center px-1">
-                                            TOP 10
-                                        </div>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>리그오브레전드</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>만화</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>아프리카TV</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>정치</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>국내야구</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>해외야구</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>해외축구</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>국민의힘</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>더불어터진당</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>전교조</span>
-                                        </a>
-                                        <hr class="vertical dark">
-                                    </div>
-                                    <div class="col-6 position-relative">
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>메인</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>보드찾기</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>신생보드</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="dropdown-menu dropdown-menu-animation dropdown-md border-radius-xl p-3 mt-0 mt-lg-3" aria-labelledby="NavChartMenu">
+                        <div class="d-none d-lg-flex">
+                            <ul class="list-group w-100">
+                                <li class="nav-item list-group-item border-0 p-0">
+                                    <a href="../../pages/coming-soon.html" class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
+                                        <span>메인</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item list-group-item border-0 p-0">
+                                    <a href="../../pages/coming-soon.html" class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
+                                        <span>Top 10</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item list-group-item border-0 p-0">
+                                    <a href="../../pages/2fa-security.html" class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
+                                        <span>보드찾기</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item list-group-item border-0 p-0">
+                                    <a href="../../pages/2fa-security.html" class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
+                                        <span>신생보드</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="d-lg-none w-80 mx-auto">
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>메인</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>보드찾기</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>신생보드</span>
-                            </a>
-                            <div class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center px-0">
-                                TOP 10
+                        <div class="row d-lg-none w-100 mx-auto">
+                            <div class="col-12 d-flex justify-content-center flex-column">
+                                <a href="../../pages/sign-in/sign-in-cover.html" class="dropdown-item border-radius-md">
+                                    메인
+                                </a>
+                                <a href="../../pages/sign-in/sign-in-illustration.html" class="dropdown-item border-radius-md">
+                                    Top 10
+                                </a>
+                                <a href="../../pages/sign-in/sign-in-basic.html" class="dropdown-item border-radius-md">
+                                    보드찾기
+                                </a>
+                                <a href="../../pages/sign-in/sign-in-basic.html" class="dropdown-item border-radius-md">
+                                    신생보드
+                                </a>
                             </div>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>리그오브레전드</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>만화</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>아프리카TV</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>정치</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>국내야구</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>해외야구</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>해외축구</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>국민의힘</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>더불어터진당</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>전교조</span>
-                            </a>
                         </div>
                     </div>
                 </li>
@@ -243,7 +186,7 @@
                 <li class="nav-item">
                     <button type="button" class="btn btn-sm btn-link text-white mb-0 me-1" data-bs-toggle="modal" data-bs-target="#MyMenuModal">
                         <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
-                        &nbsp;이진솔
+                        &nbsp;김철수
                     </button>
                 </li>
             </ul>
@@ -264,6 +207,115 @@
             </div>
             <div class="col-12">
                 <h3 class="text-bold board-title bg-gradient-info py-2 px-3">리그오브레전드</h3>
+            </div>
+        </div>
+        <div class="row d-none d-lg-block">
+            <div class="col-12 mb-sm-0 mb-3 d-lg-flex">
+                <div class="col card card-plain">
+                    <div class="card-body pt-3">
+                        <h6 class="font-weight-bolder d-flex align-items-center">
+                            <i class="material-icons me-2">campaign</i><span>소개</span>
+                        </h6>
+                        <p>리그오브레전드를 사랑하는 사람들을 위한 보드입니다. 오신 여러분들 모두 환영해요~</p>
+                        <a href="#" id="user000" class="user-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
+                            김철수<img class="level-img" src="../static/img/level/1.gif">
+                        </a>
+                        <ul class="dropdown-menu px-2 py-3 b-dropdown bg-gradient-info" aria-labelledby="user000">
+                            <div class="b-dropdown-profile">
+                                <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
+                                <h6>김철수바보떵<img class="level-img" src="../static/img/level/20.gif"></h6>
+                            </div>
+                            <li><a class="dropdown-item border-radius-xs" href="#">정보 보기</a></li>
+                            <li><a class="dropdown-item border-radius-xs" href="#">작성글 보기</a></li>
+                            <li><a class="dropdown-item border-radius-xs" href="#">쪽지 보내기</a></li>
+                            <li><a class="dropdown-item border-radius-xs bg-danger" href="#">보드에서 차단</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col card card-plain">
+                    <div class="card-body pt-3">
+                        <h6 class="font-weight-bolder d-flex align-items-center">
+                            <i class="material-icons me-2">people</i><span>운영진</span>
+                        </h6>
+                        <div class="row">
+                            <div class="col-6">
+                                <span class="text-xs">매니저</span>
+                                <a href="#" id="user001" class="user-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
+                                    김철수<img class="level-img" src="../static/img/level/1.gif">
+                                </a>
+                                <ul class="dropdown-menu px-2 py-3 b-dropdown bg-gradient-info" aria-labelledby="user001">
+                                    <div class="b-dropdown-profile">
+                                        <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
+                                        <h6>김철수바보떵<img class="level-img" src="../static/img/level/20.gif"></h6>
+                                    </div>
+                                    <li><a class="dropdown-item border-radius-xs" href="#">정보 보기</a></li>
+                                    <li><a class="dropdown-item border-radius-xs" href="#">작성글 보기</a></li>
+                                    <li><a class="dropdown-item border-radius-xs" href="#">쪽지 보내기</a></li>
+                                    <li><a class="dropdown-item border-radius-xs bg-danger" href="#">보드에서 차단</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-6">
+                                <span class="text-xs">운영진</span>
+                                <a href="#" id="user002" class="user-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
+                                    김철수<img class="level-img" src="../static/img/level/1.gif">
+                                </a>
+                                <ul class="dropdown-menu px-2 py-3 b-dropdown bg-gradient-info" aria-labelledby="user002">
+                                    <div class="b-dropdown-profile">
+                                        <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
+                                        <h6>김철수바보떵<img class="level-img" src="../static/img/level/20.gif"></h6>
+                                    </div>
+                                    <li><a class="dropdown-item border-radius-xs" href="#">정보 보기</a></li>
+                                    <li><a class="dropdown-item border-radius-xs" href="#">작성글 보기</a></li>
+                                    <li><a class="dropdown-item border-radius-xs" href="#">쪽지 보내기</a></li>
+                                    <li><a class="dropdown-item border-radius-xs bg-danger" href="#">보드에서 차단</a></li>
+                                </ul>
+                                <a href="#" id="user002" class="user-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
+                                    김철수<img class="level-img" src="../static/img/level/1.gif">
+                                </a>
+                                <ul class="dropdown-menu px-2 py-3 b-dropdown bg-gradient-info" aria-labelledby="user002">
+                                    <div class="b-dropdown-profile">
+                                        <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
+                                        <h6>김철수바보떵<img class="level-img" src="../static/img/level/20.gif"></h6>
+                                    </div>
+                                    <li><a class="dropdown-item border-radius-xs" href="#">정보 보기</a></li>
+                                    <li><a class="dropdown-item border-radius-xs" href="#">작성글 보기</a></li>
+                                    <li><a class="dropdown-item border-radius-xs" href="#">쪽지 보내기</a></li>
+                                    <li><a class="dropdown-item border-radius-xs bg-danger" href="#">보드에서 차단</a></li>
+                                </ul>
+                                <a href="#" id="user002" class="user-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
+                                    김철수<img class="level-img" src="../static/img/level/1.gif">
+                                </a>
+                                <ul class="dropdown-menu px-2 py-3 b-dropdown bg-gradient-info" aria-labelledby="user002">
+                                    <div class="b-dropdown-profile">
+                                        <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
+                                        <h6>김철수바보떵<img class="level-img" src="../static/img/level/20.gif"></h6>
+                                    </div>
+                                    <li><a class="dropdown-item border-radius-xs" href="#">정보 보기</a></li>
+                                    <li><a class="dropdown-item border-radius-xs" href="#">작성글 보기</a></li>
+                                    <li><a class="dropdown-item border-radius-xs" href="#">쪽지 보내기</a></li>
+                                    <li><a class="dropdown-item border-radius-xs bg-danger" href="#">보드에서 차단</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col card card-plain">
+                    <div class="card-body pt-3">
+                        <h6 class="font-weight-bolder d-flex align-items-center">
+                            <i class="material-icons me-2">bar_chart</i>정보
+                        </h6>
+                        <h3 class="text-gradient text-info"><span class="text-lg">랭킹 : </span><span>14</span> <span class="text-lg ms-n1">위</span></h3>
+                        <h3 class="text-gradient text-info"><span class="text-lg">게시물 : </span><span>42,345</span> <span class="text-lg ms-n1">개</span></h3>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -323,12 +375,12 @@
                 <div class="bc b-author">
                     <a href="#" id="content233" data-bs-toggle="dropdown" aria-expanded="false">
                         <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
-                        이진솔<img class="level-img" src="../static/img/level/1.gif">
+                        김철수<img class="level-img" src="../static/img/level/1.gif">
                     </a>
                     <ul class="dropdown-menu px-2 py-3 b-dropdown bg-gradient-info" aria-labelledby="content233">
                         <div class="b-dropdown-profile">
                             <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
-                            <h6>이진솔바보떵<img class="level-img" src="../static/img/level/20.gif"></h6>
+                            <h6>김철수바보떵<img class="level-img" src="../static/img/level/20.gif"></h6>
                         </div>
                         <li><a class="dropdown-item border-radius-xs" href="#">정보 보기</a></li>
                         <li><a class="dropdown-item border-radius-xs" href="#">작성글 보기</a></li>
@@ -359,7 +411,7 @@
                 <div class="bc b-author">
                     <a href="#">
                         <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
-                        이진솔바<img class="level-img" src="../static/img/level/24.gif">
+                        김철수바<img class="level-img" src="../static/img/level/24.gif">
                     </a>
                 </div>
                 <div class="bc b-info">
@@ -385,7 +437,7 @@
                 <div class="bc b-author">
                     <a href="#">
                         <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
-                        이진솔바보
+                        김철수바보
                     </a>
                 </div>
                 <div class="bc b-info">
@@ -411,7 +463,7 @@
                 <div class="bc b-author">
                     <a href="#">
                         <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
-                        이진솔바보똥<img class="level-img" src="../static/img/level/20.gif">
+                        김철수바보똥<img class="level-img" src="../static/img/level/20.gif">
                     </a>
                 </div>
                 <div class="bc b-info">
@@ -437,7 +489,7 @@
                 <div class="bc b-author">
                     <a href="#">
                         <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
-                        이진솔바보똥꼬<img class="level-img" src="../static/img/level/12.gif">
+                        김철수바보똥꼬<img class="level-img" src="../static/img/level/12.gif">
                     </a>
                 </div>
                 <div class="bc b-info">
@@ -499,79 +551,48 @@
         </div>
     </section>
 
-    <section class="container col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-10 total-section">
+    <section class="container col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-10 mini-section">
         <div class="row pb-3">
-            <div class="col-sm-12 col-md-6 row-cols-1">
-                <h5 class="text-bold">인기글</h5>
-                <hr>
-                <ul>
-                    <li>
-                        <a href="#">아 오늘 진짜 무슨일</a>
-                    </li>
-                    <li>
-                        <a href="#">아 오늘 진짜 무슨일</a>
-                    </li>
-                    <li>
-                        <a href="#">아 오늘 진짜 무슨일</a>
-                    </li>
-                    <li>
-                        <a href="#">아 오늘 진짜 무슨일</a>
-                    </li>
-                    <li>
-                        <a href="#">주작러에게 일침을 가하다</a>
-                    </li>
-                    <li>
-                        <a href="#">아 오늘 진짜 무슨일</a>
-                    </li>
-                    <li>
-                        <a href="#">주작러에게 일침을 가하다</a>
-                    </li>
-                    <li>
-                        <a href="#">이런 일이 일어난다면 너희는 어떻게 대처할것인지 한번 말해보자 말해보자</a>
-                    </li>
-                    <li>
-                        <a href="#">아 오늘 진짜 무슨일</a>
-                    </li>
-                    <li>
-                        <a href="#">이런 일이 일어난다면 너희는 어떻게 대처할것인지 한번 말해보자 말해보자</a>
-                    </li>
-                </ul>
+            <div class="col-sm-12 col-md-6 my-3 mini-section">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="text-bold">인기글</h5>
+                        <hr>
+                        <ul>
+                            <li>
+                                <a href="#">아 오늘 진짜 무슨일</a>
+                            </li>
+                            <li>
+                                <a href="#">아 오늘 진짜 무슨일</a>
+                            </li>
+                            <li>
+                                <a href="#">아 오늘 진짜 무슨일</a>
+                            </li>
+                            <li>
+                                <a href="#">아 오늘 진짜 무슨일</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-12 col-md-6">
-                <h5 class="text-bold">뉴스</h5>
-                <hr>
-                <ul>
-                    <li>
-                        <a href="#">아 오늘 진짜 무슨일</a>
-                    </li>
-                    <li>
-                        <a href="#">아 오늘 진짜 무슨일</a>
-                    </li>
-                    <li>
-                        <a href="#">아 오늘 진짜 무슨일</a>
-                    </li>
-                    <li>
-                        <a href="#">아 오늘 진짜 무슨일</a>
-                    </li>
-                    <li>
-                        <a href="#">주작러에게 일침을 가하다</a>
-                    </li>
-                    <li>
-                        <a href="#">아 오늘 진짜 무슨일</a>
-                    </li>
-                    <li>
-                        <a href="#">주작러에게 일침을 가하다</a>
-                    </li>
-                    <li>
-                        <a href="#">이런 일이 일어난다면 너희는 어떻게 대처할것인지 한번 말해보자 말해보자</a>
-                    </li>
-                    <li>
-                        <a href="#">아 오늘 진짜 무슨일</a>
-                    </li>
-                    <li>
-                        <a href="#">이런 일이 일어난다면 너희는 어떻게 대처할것인지 한번 말해보자 말해보자</a>
-                    </li>
-                </ul>
+            <div class="col-sm-12 col-md-6 my-3 mini-section">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="text-bold">뉴스</h5>
+                        <hr>
+                        <ul>
+                            <li>
+                                <a href="#">아 오늘 진짜 무슨일</a>
+                            </li>
+                            <li>
+                                <a href="#">아 오늘 진짜 무슨일</a>
+                            </li>
+                            <li>
+                                <a href="#">아 오늘 진짜 무슨일</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -673,11 +694,27 @@
         </div>
     </div>
 </footer>
-<!-- -------- END FOOTER 7 w/ DARK BACKGROUND AND 3 COLUMNS ------- -->
 
 <!-- 컨트롤 버튼 -->
 <div class="control-btn">
+    <button type="button" class="btn btn-sm bg-gradient-dark btn-round fade" id="ToTop"><i class="fas fa-arrow-up"></i></button>
     <button type="button" class="btn bg-gradient-info btn-round"><i class="fas fa-pencil-alt"></i> 글쓰기</button>
+
+    <script>
+        let topBtn = document.querySelector("#ToTop");
+
+        window.addEventListener('scroll', function () {
+            if (this.scrollY > 200) {
+                topBtn.classList.add('show');
+            } else {
+                topBtn.classList.remove('show');
+            }
+        })
+        topBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        })
+    </script>
 </div>
 
 <!-- 마이메뉴 모달 -->
@@ -703,7 +740,7 @@
                         </script>
                         <input type="file" id="ProfileUpload" style="display: none"/>
 
-                        <h4 class="mt-2">이진솔<span><img class="level-img" src="../static/img/level/20.gif"><p>대령 2호봉 | <span class="text-info text-bold">1,239,432</span>P</p></span></h4>
+                        <h4 class="mt-2">김철수<span><img class="level-img" src="../static/img/level/20.gif"><p>대령 2호봉 | <span class="text-info text-bold">1,239,432</span>P</p></span></h4>
                         <p>devfox3217@gmail.com</p>
                         <div id="Toasts" class="col-12 mt-3">
 

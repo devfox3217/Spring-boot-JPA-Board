@@ -79,9 +79,12 @@ public class User implements UserDetails {
 
         List<GrantedAuthority> authorities = new ArrayList<>();
 
+        // User 테이블의 권한은 String 형태로 되어 있기때문에 Tokenizer로 잘라서 다시 List에 넣어줌
+        // DB테이블의 단순화를 위한 설계
         TokenUtil tokenUtil = new TokenUtil();
         List<String> tokenizedRole = tokenUtil.getTokenArray(roles);
 
+        // Tokenize된 String을 List에 넣음
         for (String s : tokenizedRole) {
             authorities.add(new SimpleGrantedAuthority(s));
         }

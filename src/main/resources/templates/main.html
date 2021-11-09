@@ -3,7 +3,7 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!-- Nanum Font CDN -->
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Nanum+Myeongjo:wght@400;700;800&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <!-- Fontawesome from CDN -->
@@ -31,7 +31,7 @@
         </a>
         <button class="btn btn-sm btn-link text-white mb-0 ms-auto d-lg-none d-block" style="width: 40%" data-bs-toggle="modal" data-bs-target="#MyMenuModal">
             <img class="profile-img" src="../static/img/default_profile.jpg">
-            &nbsp;이진솔
+            &nbsp;김철수
         </button>
         <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon mt-2">
@@ -48,103 +48,46 @@
                         <span class="nav-title">보드</span>
                         <img src="../static/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-auto ms-lg-2">
                     </a>
-                    <div class="dropdown-menu ms-n3 dropdown-menu-animation dropdown-xl p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="NavBoardMenu">
-                        <div class="row d-none d-lg-block">
-                            <div class="col-12 px-4 py-2">
-                                <div class="row">
-                                    <div class="col-6 position-relative">
-                                        <div class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center px-1">
-                                            TOP 10
-                                        </div>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>리그오브레전드</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>만화</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>아프리카TV</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>정치</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>국내야구</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>해외야구</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>해외축구</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>국민의힘</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>더불어터진당</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>전교조</span>
-                                        </a>
-                                        <hr class="vertical dark">
-                                    </div>
-                                    <div class="col-6 position-relative">
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>메인</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>보드찾기</span>
-                                        </a>
-                                        <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                            <span>신생보드</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="dropdown-menu dropdown-menu-animation dropdown-md border-radius-xl p-3 mt-0 mt-lg-3" aria-labelledby="NavChartMenu">
+                        <div class="d-none d-lg-flex">
+                            <ul class="list-group w-100">
+                                <li class="nav-item list-group-item border-0 p-0">
+                                    <a href="../../pages/coming-soon.html" class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
+                                        <span>메인</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item list-group-item border-0 p-0">
+                                    <a href="../../pages/coming-soon.html" class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
+                                        <span>Top 10</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item list-group-item border-0 p-0">
+                                    <a href="../../pages/2fa-security.html" class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
+                                        <span>보드찾기</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item list-group-item border-0 p-0">
+                                    <a href="../../pages/2fa-security.html" class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
+                                        <span>신생보드</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="d-lg-none w-80 mx-auto">
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>메인</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>보드찾기</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>신생보드</span>
-                            </a>
-                            <div class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center px-0">
-                                TOP 10
+                        <div class="row d-lg-none w-100 mx-auto">
+                            <div class="col-12 d-flex justify-content-center flex-column">
+                                <a href="../../pages/sign-in/sign-in-cover.html" class="dropdown-item border-radius-md">
+                                    메인
+                                </a>
+                                <a href="../../pages/sign-in/sign-in-illustration.html" class="dropdown-item border-radius-md">
+                                    Top 10
+                                </a>
+                                <a href="../../pages/sign-in/sign-in-basic.html" class="dropdown-item border-radius-md">
+                                    보드찾기
+                                </a>
+                                <a href="../../pages/sign-in/sign-in-basic.html" class="dropdown-item border-radius-md">
+                                    신생보드
+                                </a>
                             </div>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>리그오브레전드</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>만화</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>아프리카TV</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>정치</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>국내야구</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>해외야구</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>해외축구</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>국민의힘</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>더불어터진당</span>
-                            </a>
-                            <a href="../../pages/coworking.html" class="dropdown-item border-radius-md">
-                                <span>전교조</span>
-                            </a>
                         </div>
                     </div>
                 </li>
@@ -243,13 +186,31 @@
                 <li class="nav-item">
                     <button type="button" class="btn btn-sm btn-link text-white mb-0 me-1" data-bs-toggle="modal" data-bs-target="#MyMenuModal">
                         <img class="profile-img" src="../static/img/default_profile.jpg" alt="">
-                        &nbsp;이진솔
+                        &nbsp;김철수
                     </button>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+<div class="card card-body mx-lg-3 mt-3 board">
+    <section class="container">
+        <div class="row border-radius-md ps-0">
+            <div class="col-9 col-lg-6 mb-0">
+                <div class="input-group input-group-outline">
+                    <label class="form-label">통합검색</label>
+                    <input type="email" class="form-control">
+                </div>
+            </div>
+            <div class="col-3 col-lg-2 ps-0">
+                <button type="button" class="btn bg-gradient-info mb-0 h-100"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="col-12 col-lg-4">
+
+            </div>
+        </div>
+    </section>
+</div>
 <div class="card card-body mx-lg-3 mt-3 board">
     <section class="container col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-10">
         <div class="row">
@@ -259,12 +220,81 @@
                         <h4>실시간 베스트</h4>
                     </div>
                     <div class="m-list">
-
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="m-list-thumbnail">
+                                        <img src="../static/img/default_thumb.png">
+                                    </div>
+                                    <div class="m-list-title">
+                                        <p>이재명식 가로등 고장 안나게하는 비법 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p><em>&nbsp;[2343]</em>
+                                    </div>
+                                    <div class="m-list-info">
+                                        <span>리그오브레전드 | 10.24</span>
+                                    </div>
+                                    <div class="m-list-sm">
+                                        <div class="m-sm-title">
+                                            <span>이재명식 가로등 고장 안나게하는 비법 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</span><em>&nbsp;[2332]</em>
+                                        </div>
+                                        <div class="m-sm-info">
+                                            <span>리그오브레전드 | 10.24</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-4">
-                너도오고
+                <div class="col-12 my-3 d-lg-block d-none">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h1 class="text-gradient text-info"><span id="status3" countto="87">1,432</span> <span class="text-lg ms-n2">개</span></h1>
+                            <h6 class="mb-0 font-weight-bolder">게시물 등록</h6>
+                            <p class="opacity-8 mb-0 text-sm"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 my-3 mini-section">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="text-bold">보드 순위</h5>
+                            <hr>
+                            <ul class="text-bold">
+                                <li>
+                                    <a href="#"><span class="badge badge-circle bg-gradient-info">1</span> 리그오브레전드</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 my-3 mini-section">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="text-bold">인기글</h5>
+                            <hr>
+                            <ul>
+                                <li>
+                                    <a href="#">아 오늘 진짜 무슨일</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 my-3 mini-section">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="text-bold">실시간 뉴스</h5>
+                            <hr>
+                            <ul>
+                                <li>
+                                    <a href="#">아 오늘 진짜 무슨일</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -366,6 +396,27 @@
         </div>
     </div>
 </footer>
+
+<!-- 컨트롤 버튼 -->
+<div class="control-btn">
+    <button type="button" class="btn btn-sm bg-gradient-dark btn-round fade" id="ToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        let topBtn = document.querySelector("#ToTop");
+
+        window.addEventListener('scroll', function () {
+            if (this.scrollY > 200) {
+                topBtn.classList.add('show');
+            } else {
+                topBtn.classList.remove('show');
+            }
+        })
+        topBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        })
+    </script>
+</div>
 
 <!-- 마이메뉴 모달 -->
 <div class="modal fade" id="MyMenuModal" tabindex="-1" aria-hidden="true">
