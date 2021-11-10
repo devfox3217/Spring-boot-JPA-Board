@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * 회원과 권한관리를 위한 컨트롤러
@@ -64,6 +65,14 @@ public class AuthController {
             user.setAccountNonLocked(true);
             user.setCredentialsNonExpired(true);
             user.setEnabled(true);
+            user.setFollowBoard("");
+            user.setBlockedBoard("");
+            user.setIntroduce("자기소개를 입력하세요.");
+            user.setProfile("default_profile.jpg");
+            user.setPoint(0);
+            user.setLevel(1);
+            user.setRegdate(new Date());
+            user.setLastPWDate(new Date());
 
             // 저장 후 boolean타입으로 결과 리턴
             boolean result = userService.save(user);

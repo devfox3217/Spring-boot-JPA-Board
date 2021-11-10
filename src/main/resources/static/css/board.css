@@ -89,6 +89,13 @@ nav .d-lg-none .dropdown-header {
     appearance: none;
 }
 
+#KeywordBox {
+    margin-top: 5px;
+    padding-left: 20px;
+    height: 30px;
+    overflow: hidden;
+}
+
 .search-box input {
     float: right;
     min-height: 32px;
@@ -436,6 +443,7 @@ nav .d-lg-none .dropdown-header {
     .m-list li a {
         height: 50px;
     }
+
     .m-list-title, .m-list-info {
         display: none;
     }

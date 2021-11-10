@@ -74,6 +74,9 @@ public class User implements UserDetails {
     @Column(name = "regdate")
     private Date regdate;
 
+    @Column(name = "lastpwdate")
+    private Date lastPWDate;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
 
