@@ -17,6 +17,7 @@ import java.util.Date;
 
 /**
  * 회원과 권한관리를 위한 컨트롤러
+ *
  * @author 이진솔
  * @since 2021.11.07
  */
@@ -68,7 +69,7 @@ public class AuthController {
             user.setFollowBoard("");
             user.setBlockedBoard("");
             user.setIntroduce("자기소개를 입력하세요.");
-            user.setProfile("default_profile.jpg");
+            user.setProfile("/img/default_profile.jpg");
             user.setPoint(0);
             user.setLevel(1);
             user.setRegdate(new Date());

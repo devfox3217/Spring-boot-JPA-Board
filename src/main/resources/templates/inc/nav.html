@@ -1,4 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-gradient-info py-3">
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<nav class="navbar navbar-expand-lg navbar-light bg-gradient-info py-3" th:fragment="navFragment">
     <div class="container">
         <a class="navbar-brand font-weight-bold d-none d-md-block text-white" href="/" target="_blank" style="margin-top:-14px;margin-bottom:-20px;font-size: 2.5rem;font-weight: bold;font-family: 'Dongle', serif">
             마이보드
@@ -7,8 +10,8 @@
             마이보드
         </a>
         <button class="btn btn-sm btn-link text-white mb-0 ms-auto d-lg-none d-block" style="width: 40%" data-bs-toggle="modal" data-bs-target="#MyMenuModal">
-            <img class="profile-img" src="/img/default_profile.jpg">
-            &nbsp;김철수
+            <img class="profile-img" src="/img/default_profile.jpg" alt="">
+            <span sec:authentication="principal.nickname"></span>
         </button>
         <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon mt-2">
@@ -163,10 +166,11 @@
                 <li class="nav-item">
                     <button type="button" class="btn btn-sm btn-link text-white mb-0 me-1" data-bs-toggle="modal" data-bs-target="#MyMenuModal">
                         <img class="profile-img" src="/img/default_profile.jpg" alt="">
-                        &nbsp;김철수
+                        <span sec:authentication="principal.nickname"></span>
                     </button>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+</html>

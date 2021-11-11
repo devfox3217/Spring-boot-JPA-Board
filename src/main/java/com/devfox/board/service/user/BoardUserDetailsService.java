@@ -31,6 +31,8 @@ public class BoardUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
+        // User의 모든 객체를 조회해서 넘겨줬기때문에 기본적인 값 이외에 principal에서
+        // nickname, regdate등 모든 값들을 조회할 수 있다.
         User user = userRepository.findByUsername(username);
         if (user == null) {
             throw new UsernameNotFoundException("없는 유저입니다. username : " + username);
