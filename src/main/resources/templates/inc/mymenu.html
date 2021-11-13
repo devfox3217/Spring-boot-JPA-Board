@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <!-- 마이메뉴 모달 -->
 <div class="modal fade" id="MyMenuModal" tabindex="-1" aria-hidden="true" th:fragment="myMenuFragment">
     <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
@@ -14,7 +13,7 @@
                     </div>
                     <div class="card-body text-center">
                         <a href="javascript:profileUpload()" class="avatar avatar-xl rounded-circle mymenu-profile position-relative">
-                            <img src="/img/default_profile.jpg">
+                            <img th:src="${userInfo.profile}" alt="마이보드">
                             <i class="fas fa-camera"></i>
                         </a>
                         <script type="text/javascript">
@@ -24,8 +23,8 @@
                         </script>
                         <input type="file" id="ProfileUpload" style="display: none"/>
 
-                        <h4 class="mt-2">[[${#authentication.principal.nickname}]]<span><img class="level-img" th:src="@{'/img/level/' + ${userLevel.level} + '.gif'}"><p>[[${userLevel.title}]] | <span class="text-info text-bold">[[${#authentication.principal.point}]]</span>P</p></span></h4>
-                        <p>[[${#authentication.principal.username}]]</p>
+                        <h4 class="mt-2">[[${userInfo.nickname}]]<span><img class="level-img" th:src="@{'/img/level/' + ${userLevel.img}}"><p>[[${userLevel.title}]] | <span class="text-info text-bold">[[${userInfo.point}]]</span>P</p></span></h4>
+                        <p>[[${userInfo.username}]]</p>
                         <div id="Toasts" class="col-12 mt-3">
 
                             <div class="toast fade show d-flex align-items-center justify-content-between bg-gradient-info border-0 pe-2 mx-auto mt-2" role="alert" aria-live="assertive" aria-atomic="true">

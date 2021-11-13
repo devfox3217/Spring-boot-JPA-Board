@@ -95,8 +95,8 @@ public class User implements UserDetails {
         return authorities;
     }
 
-    @OneToOne(mappedBy = "username", fetch = FetchType.LAZY)
-    @JoinColumn(name = "username")
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "username", insertable = false, updatable = false)
     private Point pointTable;
 
 }

@@ -4,15 +4,9 @@
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-<head>
 
-    <!-- meta include-->
-    <th:block th:include="inc/meta"></th:block>
-    <!-- Project Plugin css -->
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.7/dist/css/splide.min.css" rel="stylesheet">
-
-    <title>마이보드 | 메인</title>
-</head>
+<!-- head include-->
+<th:block th:replace="inc/head :: headFragment"></th:block>
 
 <body class="bg-gray-200">
 
@@ -115,7 +109,7 @@
 <th:block th:replace="inc/media_bottom :: mediaBottomFragment"></th:block>
 
 <!-- footer include-->
-<th:block th:include="inc/footer"></th:block>
+<th:block th:replace="inc/footer :: footerFragment"></th:block>
 
 <!-- mymenu modal include-->
 <th:block th:replace="inc/mymenu :: myMenuFragment"></th:block>

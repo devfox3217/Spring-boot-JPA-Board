@@ -9,7 +9,7 @@ import org.hibernate.annotations.DynamicUpdate;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "U_POINT")
+@Table(name = "U_USERPOINT")
 @Data
 @Builder
 @DynamicUpdate
@@ -24,6 +24,7 @@ public class Point {
     @Column(name = "log")
     private String log;
 
-    @OneToOne(mappedBy = "username")
+    @OneToOne(mappedBy = "pointTable", fetch = FetchType.LAZY)
+    @JoinColumn(name = "username")
     private User user;
 }

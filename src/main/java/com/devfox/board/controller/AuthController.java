@@ -1,10 +1,13 @@
 package com.devfox.board.controller;
 
+import com.devfox.board.model.Point;
 import com.devfox.board.model.User;
+import com.devfox.board.service.user.PointService;
 import com.devfox.board.service.user.UserService;
 import com.devfox.board.util.PageScriptUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.parameters.P;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,6 +31,7 @@ import java.util.Date;
 public class AuthController {
 
     private final UserService userService;
+    private final PointService pointService;
 
     /**
      * 회원가입을 위한 컨트롤러 메서드
@@ -57,6 +61,9 @@ public class AuthController {
             // 비밀번호에 사용되는 암호화 모듈 선언
             BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
+            Point point = new Point();
+            point.setUsername(username);
+
             User user = new User();
             user.setUsername(username);
             user.setPassword(encoder.encode(password));
@@ -76,8 +83,10 @@ public class AuthController {
             user.setLastPWDate(new Date());
 
             // 저장 후 boolean타입으로 결과 리턴
-            boolean result = userService.save(user);
-            if (result) {
+            boolean userInsertResult = userService.save(user);
+            boolean pointInsertResult = pointService.save(point);
+
+            if (userInsertResult && pointInsertResult) {
                 // 저장 성공시 이름을 포함한 알림 후 main 페이지로 이동
                 PageScriptUtil.alertAndMove(response, nickname + "님, 회원이 되신것을 환영합니다.", "/main");
             } else {
