@@ -1,4 +1,5 @@
 <!doctype html>
+<!--suppress ALL -->
 <html lang="ko"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
@@ -111,7 +112,7 @@
 </div>
 
 <!-- media include-->
-<th:block th:include="inc/media_bottom"></th:block>
+<th:block th:replace="inc/media_bottom :: mediaBottomFragment"></th:block>
 
 <!-- footer include-->
 <th:block th:include="inc/footer"></th:block>
@@ -120,7 +121,7 @@
 <th:block th:replace="inc/mymenu :: myMenuFragment"></th:block>
 
 <!-- control to top include-->
-<th:block th:include="inc/ctrl_totop"></th:block>
+<th:block th:replace="inc/ctrl_bth :: ctrlBtnFragment"></th:block>
 
 <!-- Bootstrap JS from CDN -->
 <script src="/js/popper.min.js"></script>

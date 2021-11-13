@@ -17,7 +17,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "B_USER")
+@Table(name = "U_USER")
 @Data
 @Builder
 @DynamicUpdate
@@ -94,5 +94,9 @@ public class User implements UserDetails {
 
         return authorities;
     }
+
+    @OneToOne(mappedBy = "username", fetch = FetchType.LAZY)
+    @JoinColumn(name = "username")
+    private Point pointTable;
 
 }

@@ -1,5 +1,8 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <!-- 컨트롤 버튼 -->
-<div class="control-btn z-index-3">
+<div class="control-btn z-index-3" th:fragment="ctrlBtnFragment">
     <button type="button" class="btn btn-sm bg-gradient-dark btn-round fade" id="ToTop"><i class="fas fa-arrow-up"></i></button>
     <script>
         let topBtn = document.querySelector("#ToTop");
@@ -17,3 +20,4 @@
         })
     </script>
 </div>
+</html>

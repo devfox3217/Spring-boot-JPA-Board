@@ -24,7 +24,7 @@
                         </script>
                         <input type="file" id="ProfileUpload" style="display: none"/>
 
-                        <h4 class="mt-2">[[${#authentication.principal.nickname}]]<span><img class="level-img" src="/img/level/20.gif"><p>대령 2호봉 | <span class="text-info text-bold">[[${#authentication.principal.point}]]</span>P</p></span></h4>
+                        <h4 class="mt-2">[[${#authentication.principal.nickname}]]<span><img class="level-img" th:src="@{'/img/level/' + ${userLevel.level} + '.gif'}"><p>[[${userLevel.title}]] | <span class="text-info text-bold">[[${#authentication.principal.point}]]</span>P</p></span></h4>
                         <p>[[${#authentication.principal.username}]]</p>
                         <div id="Toasts" class="col-12 mt-3">
 
