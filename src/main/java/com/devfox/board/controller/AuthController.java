@@ -7,7 +7,6 @@ import com.devfox.board.service.user.UserService;
 import com.devfox.board.util.PageScriptUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.core.parameters.P;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -78,7 +77,6 @@ public class AuthController {
             user.setIntroduce("자기소개를 입력하세요.");
             user.setProfile("/img/default_profile.jpg");
             user.setPoint(0);
-            user.setLevel(1);
             user.setRegdate(new Date());
             user.setLastPWDate(new Date());
 

@@ -3,7 +3,7 @@
     "level": 1,
     "title": "훈련병",
     "img": "1.gif",
-    "point": 10
+    "point": 0
   },
   {
     "level": 2,
@@ -333,12 +333,12 @@
     "level": 99,
     "title": "매니저",
     "img": "manager.gif",
-    "point": 0
+    "point": 100000000
   },
   {
     "level": 100,
     "title": "관리자",
     "img": "admin.gif",
-    "point": 0
+    "point": 200000000
   }
 ]

@@ -93,6 +93,7 @@ public class User implements UserDetails {
         }
 
         return authorities;
+
     }
 
     @OneToOne(fetch = FetchType.LAZY)
