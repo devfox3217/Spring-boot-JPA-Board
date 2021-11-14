@@ -3,7 +3,8 @@ package com.devfox.board.controller;
 import com.devfox.board.model.Level;
 import com.devfox.board.model.Setting;
 import com.devfox.board.model.User;
-import com.devfox.board.service.user.SettingService;
+import com.devfox.board.service.user.PointService;
+import com.devfox.board.service.setting.SettingService;
 import com.devfox.board.service.user.UserService;
 import com.devfox.board.util.LevelUtil;
 import lombok.RequiredArgsConstructor;
@@ -24,6 +25,7 @@ import java.io.IOException;
 public class PageController {
 
     private final UserService userService;
+    private final PointService pointService;
     private final SettingService settingService;
 
     @ModelAttribute
@@ -34,7 +36,7 @@ public class PageController {
         if (userAuth != null) {
             User userInfo = userService.findUser(userAuth.getUsername());
             Setting setting = settingService.loadSetting();
-            Level userLevel = LevelUtil.getUserLevel(userInfo);
+            Level userLevel = LevelUtil.getUserLevel(userInfo.getLevel());
 
             model.addAttribute("setting", setting);
             model.addAttribute("userInfo", userInfo);
@@ -50,22 +52,16 @@ public class PageController {
 
     @RequestMapping("/board")
     public String board() {
-        System.out.println("방가");
+
         return "board";
     }
 
-    @RequestMapping("/user")
-    private String user() {
-        return "user";
+    @RequestMapping("/content")
+    public String content(
+            @AuthenticationPrincipal User userAuth
+    ) {
+        pointService.contentReadPointInsert(userAuth.getUsername());
+        return "content";
     }
 
-    @RequestMapping("/manager")
-    private String manager() {
-        return "manager";
-    }
-
-    @RequestMapping("/admin")
-    private String admin() {
-        return "admin";
-    }
 }

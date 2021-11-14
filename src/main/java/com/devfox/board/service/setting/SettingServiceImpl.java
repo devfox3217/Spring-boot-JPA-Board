@@ -1,4 +1,4 @@
-package com.devfox.board.service.user;
+package com.devfox.board.service.setting;
 
 
 import com.devfox.board.model.Setting;

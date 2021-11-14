@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "U_USERPOINT")
@@ -27,4 +28,10 @@ public class Point {
     @OneToOne(mappedBy = "pointTable", fetch = FetchType.LAZY)
     @JoinColumn(name = "username")
     private User user;
+
+    @Transient
+    private String msg;
+
+    @Transient
+    private Date regDate;
 }

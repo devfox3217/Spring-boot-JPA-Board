@@ -67,7 +67,7 @@ public class AuthController {
             user.setUsername(username);
             user.setPassword(encoder.encode(password));
             user.setNickname(nickname);
-            user.setRoles("USER");
+            user.setRoles("ROLE_USER");
             user.setAccountNonExpired(true);
             user.setAccountNonLocked(true);
             user.setCredentialsNonExpired(true);

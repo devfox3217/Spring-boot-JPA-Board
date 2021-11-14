@@ -84,6 +84,7 @@ public class User implements UserDetails {
 
         // User 테이블의 권한은 String 형태로 되어 있기때문에 Tokenizer로 잘라서 다시 List에 넣어줌
         // DB테이블의 단순화를 위한 설계
+        // Hierarchy를 적용하면서 사실상 쓸모가 없어졌으나 괜찮은 방법이라 우선 놔둠
         TokenUtil tokenUtil = new TokenUtil();
         List<String> tokenizedRole = tokenUtil.getTokenArray(roles);
 
